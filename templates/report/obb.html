@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>MBPP - eLatihan | Laporan</title>
+        <meta name="description" content="MBPP - eLatihan | Laporan">
+        <meta name="author" content="eLatihan">
+
+        <style>
+            @page {
+                size: letter landscape;
+                margin: 1cm;
+            }
+            html {
+                font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+                font-size: 0.85rem !important;
+            }
+            .default-template {
+                color: #333;
+                font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+                font-size: 0.85rem !important;
+            }
+            table tr.top table td.title {
+                color: #333;
+                font-size: 0.85rem !important;
+            }
+            table tr.heading td {
+                color: #333;
+                font-weight: bold;
+                font-size: 0.85rem !important;
+            }
+            #footer {
+                font-size: 0.85rem !important;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 2.5rem;            /* Footer height */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="default-template">
+            <h4 class="text-center mb-0">LAPORAN OUTCOME BASED BUDGETING (OBB)</h4>
+            <h4 class="text-center mt-0 mb-2">MAJLIS BANDARAYA PULAU PINANG</h4>
+
+            <table class="table mt-2">
+                <tbody>
+                    <tr>
+                        <th scope="row" colspan="2">Keterangan Output</th>
+                        <td colspan="3">Pengurusan Program Latihan</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2">Sumbangan Kepada Outcome</th>
+                        <td>Penyampaian Perkhidmatan Terbaik</td>
+                        <th scope="row">Wajaran</th>
+                        <td>50 %</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2"></th>
+                        <td>Tadbir Urus Yang Kompeten</td>
+                        <th scope="row">Wajaran</th>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2">Pi Output 1</th>
+                        <td colspan="3">Bilangan Program Latihan</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2">Wajaran</th>
+                        <th scope="row">Ukuran</th>
+                        <th scope="row">Jenis Sasaran</th>
+                        <th scope="row">Kekerapan</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">100%</td>
+                        <td>Bilangan</td>
+                        <td>Max PI</td>
+                        <td>Suku Tahun</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2">Tahun Aras Asas</th>
+                        <th scope="row">Aras Asas</th>
+                        <th scope="row">Varian</th>
+                        <th scope="row">Had Toleransi</th>
+                    </tr>
+                    <tr>
+                        <td colspan="2">{{data.level.year}}</td>
+                        <td>{{data.level.level}}</td>
+                        <td>5</td>
+                        <td>{{data.level.tolerance_limit}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="5">Jumlah Kursus Sasaran</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">{{data.target.target_5_year}}</th>
+                        <th scope="row">{{data.target.target_4_year}}</th>
+                        <th scope="row">{{data.target.target_3_year}}</th>
+                        <th scope="row">{{data.target.target_2_year}}</th>
+                        <th scope="row">{{data.target.target_1_year}}</th>
+                    </tr>
+                    <tr>
+                        <td>{{data.target.target_5}}</td>
+                        <td>{{data.target.target_4}}</td>
+                        <td>{{data.target.target_3}}</td>
+                        <td>{{data.target.target_2}}</td>
+                        <td>{{data.target.target_1}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="3">Pelan Pemantauan</th>
+                        <th scope="row">Sasaran ({{data.plan.target.year}})</th>
+                        <th scope="row">Sebenar ({{data.plan.actual.year}})</th>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="3">Jan - Mac</th>
+                        <td>{{data.plan.target.q1}}</td>
+                        <td>{{data.plan.actual.q1}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="3">Apr - Jun</th>
+                        <td>{{data.plan.target.q2}}</td>
+                        <td>{{data.plan.actual.q2}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="3">Jul - Sep</th>
+                        <td>{{data.plan.target.q3}}</td>
+                        <td>{{data.plan.actual.q3}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="3">Okt - Dis</th>
+                        <td>{{data.plan.target.q4}}</td>
+                        <td>{{data.plan.actual.q4}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" colspan="2">Sumber Data</th>
+                        <td colspan="3" class="text-right">Unit Latihan & Kerjaya, Jabatan Khidmat Pengurusan</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+
+    <footer id="footer" class="default-template row">
+        <p class="col text-left">
+            <img src="https://pipeline-project.sgp1.digitaloceanspaces.com/images/mbpp-logo.png" style="max-width: 2rem">
+            <span>MBPP | eLatihan</span>
+        </p>
+        <p class="col text-right">
+            Dijana pada: {{data.misc.generated_at}}
+        </p>
+    </footer> 
+
+</html>
