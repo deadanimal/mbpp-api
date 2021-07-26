@@ -29,7 +29,7 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 
 
 ALLOWED_HOSTS = [
-    'mbpp-elatihan-api.pipe.my',
+    '167.71.221.106',
     '127.0.0.1',
     'localhost'
 ]
@@ -184,12 +184,12 @@ DEFAULT_FROM_EMAIL = "noreply@pipeline.com.my"  # if you don't already have this
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
-    'http://mbpp-elatihan-api.pipe.my',
+    'http:/167.71.221.106/',
     'http://127.0.0.1',
     'http://localhost'
 ]
 CORS_ORIGIN_REGEX_WHITELIST = [
-    'http://mbpp-elatihan-api.pipe.my',
+    'http:/167.71.221.106/',
     'http://127.0.0.1',
     'http://localhost'
 ]
@@ -276,4 +276,4 @@ EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'test@mcmc.gov.my'
+DEFAULT_FROM_EMAIL = ''
